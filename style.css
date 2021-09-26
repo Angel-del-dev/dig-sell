@@ -1,0 +1,52 @@
+html {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrap {
+  border: 1px solid #0a0a0a;
+  display: grid;
+  grid-template-columns: repeat(5, 150px);
+  grid-template-rows: repeat(5, 150px);
+}
+
+.ground {
+  background-color: rgb(187, 155, 114);
+}
+
+.ground:hover {
+  background-color: cyan;
+  opacity: 0.2;
+  cursor: pointer;
+  border: 1px solid #0a0a0a;
+  cursor: pointer;
+}
+
+.points {
+  position: absolute;
+  right: 0;
+  border: 1px solid #0a0a0a;
+  padding: 10px;
+  top: 0;
+}
+
+.points > div:not(.points > div:last-child) {
+  margin-bottom: 5px;
+}
+
+@media (max-width: 1300px) {
+  .wrap {
+    grid-template-columns: repeat(5, 100px);
+    grid-template-rows: repeat(5, 100px);
+  }
+}
+
+@media (max-width: 960px) {
+    .wrap {
+      grid-template-columns: repeat(5, 75px);
+      grid-template-rows: repeat(5, 75px);
+    }
+  }
+  
